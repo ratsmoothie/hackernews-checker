@@ -15,10 +15,6 @@ class PostRanking {
     sortByTime() {
       return this.posts.sort((a, b) => b.timeSubmitted - a.timeSubmitted);
     }
-  
-    sortByRank() {
-      return this.posts.sort((a, b) => a.rank - b.rank);
-    }
   }
   
   module.exports = PostRanking;

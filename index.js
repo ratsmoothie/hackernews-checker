@@ -75,14 +75,13 @@ async function saveHackerNewsArticles() {
   // Create PostRanking object
   const postRanking = new PostRanking(postObjects);
 
-  // Output stats
-  console.log('Posts per minute:', postRanking.getPostsPerMinute());
-
   // Output sorted posts by time
-  console.log('Posts sorted by time:');
+  console.log('First 100 posts, sorted by time:');
   postRanking.sortByTime().forEach(post => {
     console.log(`Rank: ${post.rank}, Title: ${post.title}, User: ${post.user}, Age: ${post.age}, UTC Time: ${post.getUTCTime()}`);
   });
+
+  console.log('\n');
 
   // Test: Check if posts are sorted from newest to oldest
   const sortedByTime = postRanking.sortByTime();
@@ -94,6 +93,11 @@ async function saveHackerNewsArticles() {
     }
   }
   console.log('Posts are sorted from newest to oldest:', isSorted);
+  console.log('\n');
+
+  // Output stats
+  console.log('Bonus stats for nerds: ');
+  console.log('Posts per minute:', postRanking.getPostsPerMinute());
 
 }
 

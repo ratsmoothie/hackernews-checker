@@ -8,13 +8,10 @@ class Post {
       this.user = user;
       this.age = age; // This is the age string like '5 minutes ago'
     }
-  
+    
+    //conversion to get UTC time
     getUTCTime() {
       return new Date(this.timeSubmitted * 1000).toISOString();
-    }
-  
-    getEpochTime() {
-      return this.timeSubmitted;
     }
   }
   
