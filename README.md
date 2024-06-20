@@ -6,5 +6,21 @@ Further, it outputs all of the relevant information about each post into the con
 The bones of a react frontend exist here, it is under construction.
 
 # Dependencies
-Playwright must be installed in VS code [Playwright](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright).
-Node.js must be installed [Node.js](https://nodejs.org/en).
+[Playwright](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright)
+
+[Node.js](https://nodejs.org/en)
+
+# Prerequisites
+Make sure playwright is installed. You can install it using npm:
+```npm install playwright```
+Also, you must install other required npm packages in your project directory:
+```npm install```
+
+# Running the script
+After cloning the repository, navigate to the directory on your machine and run:
+```node index.js```
+
+# Additional notes
+* Playwright Setup:
+    * If you encounter any issues with Playwright, ensure that the required browsers are installed by running
+```npx playwright install```
